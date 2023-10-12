@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+        .treasure {
+            margin-top: 20px;
+        }
+
+        #locations,
+        #penalty {
+            margin: 10px;
+            font-weight: bold;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #1926b7;
+        }
+
+        #help {
+            margin: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #260bc0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
