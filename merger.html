@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html> <head> <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style>
+
+<title>SAI TEJA GANGISETTI builds a merger</title>
+</head>
+
+
+
+<body>
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button onclick="addEnd()">Add end</button>
+    <button onclick="addFront()">Add front</button>
+    <button onclick="remove()">Remove</button>
+
+    <div class="flex-container">
+        <div class="merger">First Div</div>
+        <div class="merger">Second Div</div>
+        <div class="merger">Third Div</div>
+    </div>
+
+    <script>
+        function addEnd() {
+            const inputElement = document.getElementById('inputText');
+            const container = document.querySelector('.flex-container');
+            
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.innerHTML = inputElement.value;
+            newDiv.className = 'merger';
+            
+            // Append the new element to the container
+            container.appendChild(newDiv);
+        }
+
+        function addFront() {
+            const inputElement = document.getElementById('inputText');
+            const container = document.querySelector('.flex-container');
+            
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.innerHTML = inputElement.value;
+            newDiv.className = 'merger';
+            
+            // Get the container div and insert the new element at the front
+            container.insertBefore(newDiv, container.firstChild);
+        }
+
+        function remove() {
+            const mergerItems = document.getElementsByClassName('merger');
+            const length = mergerItems.length;
+
+            if (length > 0) {
+                const middleIndex = Math.floor(length / 2);
+                mergerItems[middleIndex].remove();
+            }
+        }
+    </script>
+</body>
+</html>

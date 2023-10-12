@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Game</title>
+</head>
+<body>
+    <h1>Pirate Game</h1>
+    <p>Trap Location: <span id="trapLocation"></span></p>
+    <p>Treasure Location: <span id="treasureLocation"></span></p>
+    <p>Penalty: <span id="penalty"></span></p>
+    <button id="newGameButton">New Game</button>
+
+    <script>
+        const trapLocation = Math.floor(Math.random() * 25);
+        const treasureLocation = Math.floor(Math.random() * 25);
+        let penalty = 0;
+
+        document.getElementById('trapLocation').textContent = trapLocation;
+        document.getElementById('treasureLocation').textContent = treasureLocation;
+        document.getElementById('penalty').textContent = penalty;
+
+        document.getElementById('newGameButton').addEventListener('click', function () {
+            trapLocation = Math.floor(Math.random() * 25);
+            treasureLocation = Math.floor(Math.random() * 25);
+            penalty = 0;
+            
+            document.getElementById('trapLocation').textContent = trapLocation;
+            document.getElementById('treasureLocation').textContent = treasureLocation;
+            document.getElementById('penalty').textContent = penalty;
+        });
+    </script>
+</body>
+</html>
